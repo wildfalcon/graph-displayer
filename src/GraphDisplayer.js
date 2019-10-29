@@ -34,8 +34,6 @@ const GraphDisplayer = props => {
     });
   };
   
-  
-  
   useEffect(() => {
     const loadPdf = async () => {
       const pdf = await pdfjsLib.getDocument({
