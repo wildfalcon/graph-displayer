@@ -34,17 +34,19 @@ const GraphDisplayer = props => {
     });
   };
   
-  const loadPdf = async () => {
-    const pdf = await pdfjsLib.getDocument({
-      url: pdfUrl
-    }).promise;
-    
-    setPdf(pdf);
-  };
+  
   
   useEffect(() => {
-    loadPdf(config.pdfUrl);
-  }, []);
+    const loadPdf = async () => {
+      const pdf = await pdfjsLib.getDocument({
+        url: pdfUrl
+      }).promise;
+      
+      setPdf(pdf);
+    };
+
+    loadPdf(pdfUrl);
+  }, [pdfUrl]);
   
   useEffect(() => {
     const loadPage = async pdf => {
@@ -54,7 +56,7 @@ const GraphDisplayer = props => {
     if (pdf) {
       loadPage(pdf);
     }
-  }, [pdf]);
+  }, [pdf, pageIndex]);
   
   useEffect(() => {
     
@@ -77,7 +79,7 @@ const GraphDisplayer = props => {
       if (page) {
         renderPage(page);
       }
-    }, [page]);
+    }, [page, coords, pdfScale]);
     
   useEffect(() => {
     refImage.current.src = dataUrl;
