@@ -7,11 +7,16 @@ import React from 'react';
 // pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.js`;
 
 const GraphDisplayer = props => {
+  const getConfig = () => {
+    return JSON.parse(props.config);
+  };
    
+  const config = getConfig();
+  const {name} = config; 
 
     return (
         <div className='graph-displayer'>
-            <p>I'm going to display a graph</p>
+            <p>Hello {name}</p>
         </div>
     )
 }
