@@ -18,8 +18,6 @@ const GraphDisplayer = props => {
     pdfScale
   } = config;
   
-
-  
   const [pdf, setPdf] = useState(null);
   const [page, setPage] = useState(null);
   const [dataUrl, setDataUrl] = useState(null);
@@ -33,8 +31,6 @@ const GraphDisplayer = props => {
       dataUrl
     });
   };
-  
-  
   
   useEffect(() => {
     const loadPdf = async () => {
@@ -59,7 +55,6 @@ const GraphDisplayer = props => {
   }, [pdf, pageIndex]);
   
   useEffect(() => {
-    
     const renderPage = async page => {
       const viewport = page.getViewport({ scale: pdfScale });
       const canvas = document.createElement('canvas');
