@@ -1,7 +1,7 @@
 {
-  "name": "graph-displayer",
+  "name": "@wildfalcon/graph-displayer",
   "version": "0.1.0",
-  "private": true,
+  "main": "index.js",
   "dependencies": {
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -37,5 +37,14 @@
     "babel-loader": "^8.0.6",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wildfalcon/graph-displayer.git"
+  },
+  "author": "Laurie Young",
+  "bugs": {
+    "url": "https://github.com/wildfalcon/graph-displayer/issues"
+  },
+  "homepage": "https://github.com/wildfalcon/graph-displayer#readme"
 }
