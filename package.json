@@ -1,6 +1,6 @@
 {
   "name": "@wildfalcon/graph-displayer",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha-2",
   "main": "index.js",
   "dependencies": {
     "react": "^16.11.0",
