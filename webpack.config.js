@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: './src/components/graph-displayer/graph-displayer.js',
+  entry: './src/main.js',
   output: {
     path: path.resolve('dist'),
     filename: 'index.js',

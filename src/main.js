@@ -1,1 +1,1 @@
-import './components/graph-displayer';
+export * from './components/simple-module/simple-module.js';
