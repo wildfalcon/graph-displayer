@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import GraphDisplayer from './react/GraphDisplayer';
-import { html, LitElement } from '@polymer/lit-element';
+import { html, LitElement } from 'lit-element';
 
 export class GraphDisplayerWebComponent extends LitElement {
   static get properties() {
