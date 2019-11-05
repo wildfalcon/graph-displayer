@@ -4,11 +4,11 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "dependencies": {
+    "lit-element": "^2.2.1",
+    "pdfjs-dist": "^2.2.228",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0",
-    "@polymer/lit-element": "^0.7.1",
-    "pdfjs-dist": "^2.2.228"
+    "react-scripts": "3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
