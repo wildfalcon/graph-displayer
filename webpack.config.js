@@ -12,12 +12,10 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        include: [
-          // These packages are distributed as es2015 modules, therefore they need
-          // to be transpiled to es5.
-          /node_modules(?:\/|\\)lit-element|lit-html/
-        ],
+        // don't transpile node-modules
+        // but do compile lit-element and lit-html
+        // https://github.com/Polymer/lit-element/issues/54#issuecomment-546018158
+        exclude: /node_modules\/(?!(lit-element|lit-html)\/).*/,
         use: {
           loader: "babel-loader"
         }
