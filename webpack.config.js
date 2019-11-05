@@ -1,12 +1,16 @@
- module.exports = {
-   entry: {
-     index: './src/main.js',
-     'lib/graph-displayer': './src/components/graph-displayer/graph-displayer.js',
-     'lib/graph-displayer/index': './src/components/graph-displayer/index.js'
-   },
-   module: {
-     rules: [
-       {
+const path = require('path');
+
+module.exports = {
+  mode: 'production',
+  entry: './src/components/graph-displayer/graph-displayer.js',
+  output: {
+    path: path.resolve('dist'),
+    filename: 'index.js',
+    libraryTarget: 'commonjs2',
+  },
+  module: {
+    rules: [
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
