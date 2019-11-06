@@ -1,8 +1,8 @@
 {
   "name": "@wildfalcon/graph-displayer",
   "version": "0.1.0-alpha-2",
-  "main": "./build/index.js",
-  "module": "./build/index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "dependencies": {
     "lit-element": "^2.2.1",
     "pdfjs-dist": "^2.2.228",
