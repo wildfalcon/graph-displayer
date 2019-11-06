@@ -1,13 +1,14 @@
 {
   "presets": [
     "@babel/preset-react",
-  //   [
-  //     "@babel/preset-env",
-  //     {
-  //       "targets": {
-  //         "chrome": "78"
-  //       }
-  //     }
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true
+        }
+      }
+    ]
     ]
   // ],
   // "plugins": [ // https://github.com/Polymer/lit-element/issues/54#issuecomment-493663449
