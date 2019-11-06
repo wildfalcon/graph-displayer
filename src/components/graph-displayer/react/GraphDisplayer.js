@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import pdfjsLib from "pdfjs-dist";
+import pdfjsLib from "@bundled-es-modules/pdfjs-dist/build/pdf";
 import {getImageDataAsDataUrl } from '../../../Utils';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.js`;
