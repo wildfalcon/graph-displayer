@@ -51,18 +51,17 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <simple-web-component/>
-    <div id="root">
-      <!-- <graph-displayer id="graph-displayer" config='{
-        "coords": {"x": 100, "y":70, "w":200, "h": 200},
-        "pdfUrl": "http://localhost:3000/Curto-Reyes_2010.pdf",
-        "width": 200,
-        "height": 200,
-        "pageIndex": 5,
-        "pdfScale" : 1
-      }'/> -->
-    </div>
+    <simple-web-component></simple-web-component>
+    
+    <graph-displayer id="graph-displayer" config='{
+      "coords": {"x": 100, "y":70, "w":200, "h": 200},
+      "pdfUrl": "http://localhost:3000/Curto-Reyes_2010.pdf",
+      "width": 200,
+      "height": 200,
+      "pageIndex": 5,
+      "pdfScale" : 1
+    }'/>
+    
   
   </body>
 </html>
