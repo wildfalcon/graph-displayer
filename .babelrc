@@ -1,6 +1,18 @@
 {
   "presets": [
     "@babel/preset-react",
-    "@babel/env",
-  ]
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true
+        }
+      }
+    ]
+    ]
+  // ],
+  // "plugins": [ // https://github.com/Polymer/lit-element/issues/54#issuecomment-493663449
+  //   ["@babel/plugin-proposal-class-properties", { "loose": true }],
+  //   ["@babel/plugin-transform-classes", {"loose": true}]
+  // ]
 }
