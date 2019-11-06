@@ -1,17 +1,17 @@
 {
   "presets": [
     "@babel/preset-react",
-    [
-      "@babel/preset-env",
-      {
-        "targets": {
-          "chrome": "78"
-        }
-      }
+  //   [
+  //     "@babel/preset-env",
+  //     {
+  //       "targets": {
+  //         "chrome": "78"
+  //       }
+  //     }
     ]
-  ],
-  "plugins": [ // https://github.com/Polymer/lit-element/issues/54#issuecomment-493663449
-    ["@babel/plugin-proposal-class-properties", { "loose": true }],
-    ["@babel/plugin-transform-classes", {"loose": true}]
-  ]
+  // ],
+  // "plugins": [ // https://github.com/Polymer/lit-element/issues/54#issuecomment-493663449
+  //   ["@babel/plugin-proposal-class-properties", { "loose": true }],
+  //   ["@babel/plugin-transform-classes", {"loose": true}]
+  // ]
 }
