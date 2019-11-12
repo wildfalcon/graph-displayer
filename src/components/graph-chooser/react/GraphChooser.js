@@ -6,7 +6,7 @@ import Lock from "@material-ui/icons/Lock";
 import LockOpen from "@material-ui/icons/LockOpen";
 import DragHandle from "@material-ui/icons/DragHandle";
 
-import ZoomControls from '../../ZoomControls';
+import ZoomControls from './ZoomControls';
 import SelectionRectangles from "./SelectionRectangles";
 
 import {

@@ -20,7 +20,7 @@ export function clone(thing) {
 
 export function doZoomFloatValueSteps(out, value, steps) {
   const candidates = steps.filter(s => value >= s.from && value <= s.to);
-  const step = candidates.length == 2
+  const step = candidates.length === 2
       ? (out
           ? candidates[0]
           : candidates[1]
@@ -63,6 +63,21 @@ export function svgMirrorTitles(svgElems) {
 }
 
 export const svgNs = 'http://www.w3.org/2000/svg';
+
+export function svgMirrorTitle(svg) {
+  const svgTitle = 'title';
+
+  const title = svg.getAttribute('title');
+  if (title) {
+      const et = svg.getElementsByTagNameNS(svgNs, svgTitle);
+      if (!et || et.length === 0) {
+          const te = document.createElementNS(svgNs, svgTitle);
+          te.appendChild(document.createTextNode(title))
+          svg.appendChild(te);
+      }
+  }
+}
+
 
 export function px(value) {
   return `${value}${value !== 0 ? 'px' : ''}`;
