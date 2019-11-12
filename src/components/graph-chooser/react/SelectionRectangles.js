@@ -10,6 +10,7 @@ import {
     svgNs,
     svgMirrorTitles
 } from "../../../Utils";
+import "./selection-rectangle.scss";
 
 class SelectionRectangles extends Component {
     constructor(props) {
