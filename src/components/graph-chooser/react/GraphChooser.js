@@ -22,7 +22,7 @@ import {
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.js`;
 
-export default class GraphChooserMainUi extends React.Component {
+export default class GraphChooser extends React.Component {
     constructor(props) {
         super(props);
 
