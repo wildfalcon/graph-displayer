@@ -397,7 +397,8 @@ export default class GraphChooser extends React.Component {
     }
 
     componentDidMount() {
-        this.recoverSettings();
+      this.configure();
+      this.recoverSettings();
 
         window.addEventListener(
             "beforeunload",
