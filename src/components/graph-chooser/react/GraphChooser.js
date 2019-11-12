@@ -16,11 +16,8 @@ import {
     svgMirrorTitles,
     clone,
     removeProps,
-    getImageDataAsDataUrl,
     doZoomFloatValueSteps
 } from "../../../Utils";
-
-import "./style.scss";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.js`;
 
