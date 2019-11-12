@@ -399,9 +399,6 @@ class SelectionRectangles extends Component {
             return;
         }
 
-        const { x, y } = this.getMouseCoords(ev);
-        // console.log(`pageIndex: ${this.props.data.pageIndex} - mouseUp: ${x}, ${y}`);
-
         const {
             currentSelectionId,
             creating,
@@ -446,12 +443,7 @@ class SelectionRectangles extends Component {
 
     _handleMouseUpDoc(ev) {
         ev.preventDefault();
-
         const { mouseDown } = this.state;
-        const { scrollTop, scrollLeft, scrollWidth, scrollHeight } = this._offsetParent;
-
-        const { x, y } = this.getMouseCoords(ev);
-
         if (mouseDown) {
             // console.log(`has mouse: pageIndex: ${this.props.data.pageIndex} - mouseUpDoc: ${x}, ${y}`);
             this._handleMouseUp(ev);
