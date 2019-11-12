@@ -1,0 +1,134 @@
+$unhoveredColor: gray;
+$hoveredColor: black;
+$handleBorderRadius: 50%;
+
+.selection-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  cursor: crosshair;
+}
+.selection-rectangle {
+  border: #{var(--borderSize)} dotted $unhoveredColor;
+  z-index: 10;
+}
+.selection-rectangle.hovered {
+  border-color: $hoveredColor;
+  cursor: move;
+}
+
+// .selection-rectangle.transparent {
+//   opacity: 0.5;
+//   pointer-events: none;
+// }
+
+.selection-handle {
+  position: absolute;
+  display: block;
+  border-radius: 0;
+  border-radius: $handleBorderRadius;
+  // border: 1px solid black;
+  // background-color: black;
+  transform: scale(0.1);
+  opacity: 0;
+  width: var(--handleSize);
+  height: var(--handleSize);
+  left: calc(50% - var(--handleSize) / 2);
+  top: calc(50% - var(--handleSize) / 2);
+}
+.selection-rectangle.hovered .selection-handle {
+  // border-color: magenta;
+  background-color: $hoveredColor;
+}
+
+.selection-rectangle.transparent .selection-handle,
+.selection-rectangle.dragging .selection-handle {
+  cursor: inherit;
+}
+
+.selection-rectangle:focus .selection-handle,
+.selection-rectangle:hover .selection-handle,
+.selection-rectangle.dragging .selection-handle,
+.selection-rectangle.focused .selection-handle,
+.selection-rectangle.hovered .selection-handle {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.selection-rectangle.read-only {
+  cursor: default;
+}
+
+.selection-rectangle.read-only .selection-handle {
+  display: none;
+}
+
+.selection-rectangle .delete {
+  cursor: pointer;
+  font-size: 2em;
+  margin: 0.25em;
+  display: none;
+  float: right;
+}
+
+.selection-rectangle.hovered .delete {
+  display: inline-block;
+  fill: darkgray;
+}
+
+.selection-rectangle.hovered .delete:hover {
+  fill: black;
+}
+
+.selection-rectangle.creating .delete,
+.selection-rectangle.editing .delete {
+  display: none;
+}
+
+.selection-handle.top-left {
+  left: calc(0% - (#{var(--borderSize)} + var(--handleSize)) / 2);
+  top: calc(0% - (#{var(--borderSize)} + var(--handleSize)) / 2);
+  cursor: nwse-resize;
+  z-index: 1;
+}
+
+.selection-handle.top-center {
+  top: calc(0% - (#{var(--borderSize)} + var(--handleSize)) / 2);
+  cursor: ns-resize;
+}
+
+.selection-handle.top-right {
+  top: calc(0% - (#{var(--borderSize)} + var(--handleSize)) / 2);
+  left: calc(100% + (#{var(--borderSize)} - var(--handleSize)) / 2);
+  cursor: nesw-resize;
+  z-index: 1;
+}
+
+.selection-handle.right-center {
+  left: calc(100% + (#{var(--borderSize)} - var(--handleSize)) / 2);
+  cursor: ew-resize;
+}
+
+.selection-handle.bottom-right {
+  top: calc(100% + (#{var(--borderSize)} - var(--handleSize)) / 2);
+  left: calc(100% + (#{var(--borderSize)} - var(--handleSize)) / 2);
+  cursor: nwse-resize;
+  z-index: 1;
+}
+
+.selection-handle.bottom-center {
+  top: calc(100% + (#{var(--borderSize)} - var(--handleSize)) / 2);
+  cursor: ns-resize;
+}
+
+.selection-handle.bottom-left {
+  top: calc(100% + (#{var(--borderSize)} - var(--handleSize)) / 2);
+  left: calc(0% - (#{var(--borderSize)} + var(--handleSize)) / 2);
+  cursor: nesw-resize;
+  z-index: 1;
+}
+
+.selection-handle.left-center {
+  left: calc(0% - (#{var(--borderSize)} + var(--handleSize)) / 2);
+  cursor: ew-resize;
+}
