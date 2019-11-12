@@ -7,7 +7,7 @@ import LockOpen from "@material-ui/icons/LockOpen";
 import DragHandle from "@material-ui/icons/DragHandle";
 
 import ZoomControls from '../../ZoomControls';
-import SelectionRectangles from "../../SelectionRectangles";
+import SelectionRectangles from "./SelectionRectangles";
 
 import {
     persistSettings,
