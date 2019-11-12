@@ -1,6 +1,7 @@
 
 import {
-  removeProps
+  removeProps,
+  px
 } from './Utils';
 
 test('removeProps', () => {
