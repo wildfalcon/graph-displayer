@@ -28,3 +28,16 @@ test('removeProps', () => {
       expect(removeProps(ob, excludeProps)).toEqual(expected);
   });
 });
+
+test('px', () => {
+  [{
+      value: 0,
+      expected: '0'
+  }, {
+      value: 15,
+      expected: '15px'
+  }, {
+      value: -20.5,
+      expected: '-20.5px'
+  }].forEach(t => expect(px(t.value)).toEqual(t.expected));
+});

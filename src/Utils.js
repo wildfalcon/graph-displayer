@@ -63,3 +63,7 @@ export function svgMirrorTitles(svgElems) {
 }
 
 export const svgNs = 'http://www.w3.org/2000/svg';
+
+export function px(value) {
+  return `${value}${value !== 0 ? 'px' : ''}`;
+}
