@@ -1,0 +1,126 @@
+@import "../../../vars.scss";
+
+.graph-chooser-main-ui {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pdf-page-wrapper {
+  border-top: 1px dashed gray;
+  position: relative;
+}
+.graph-selection-rect {
+  border: 3px dotted lightgray;
+  z-index: 1000;
+}
+.graph-selection-rect.selected {
+  border: 3px dotted red;
+  border-color: $primaryBackgroundHilightLight3;
+  background-color: $transulcentBackground;
+}
+.graph-selection-handle {
+  background-color: lightgray;
+}
+.graph-selection-rect.selected .graph-selection-handle {
+  background-color: $primaryBackgroundHilightLight3;
+}
+.page-bounds-rect {
+  border: 3px solid gold;
+  z-index: 1;
+}
+.pdf-page-wrapper:nth-child(1) {
+  border-top-width: 0;
+}
+.pdf-page-number {
+  border: 1px solid black;
+  display: inline-block;
+  min-width: 28px;
+  text-align: center;
+  margin: 0.5em;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+}
+.drag-group {
+  display: none;
+  cursor: default;
+}
+.graph-selection-rect.hovered .drag-group,
+.drag-group.selected {
+  display: inline-block;
+  border: 2px solid lightgray;
+  background-color: lightgray;
+  border-radius: 4px;
+  padding: 0 0 0 0.5em;
+  margin: 0.5em;
+}
+.graph-selection-rect.creating .drag-group,
+.graph-selection-rect.editing .drag-group {
+  display: none;
+}
+.drag-group .inner-group {
+  display: flex;
+  margin-left: -0.25em;
+  padding: 0.25em 0.25em 0.25em 0;
+}
+.drag-group .inner-group .drag-handle {
+  margin-right: 0.25em;
+  cursor: move;
+}
+.drag-group.selected,
+.graph-selection-rect.hovered .drag-group.selected {
+  border: 2px solid $primaryBackgroundHilightDark3;
+  background-color: $primaryBackgroundHilightLight3;
+}
+.graph-selection-rect.selected .delete {
+  fill: $primaryBackgroundHilightLight3;
+}
+.graph-selection-rect.selected .delete:hover {
+  fill: $primaryBackgroundHilightDark3;
+}
+
+.header-bar {
+  border-bottom: 1px dotted black;
+  padding: 0.25em;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.doc-wrapper {
+  flex: 1;
+  overflow: auto;
+}
+.GraphChooser {
+  height: 100%;
+}
+
+.load-progress {
+  margin-right: 1em;
+
+  .page-loaded-status {
+    padding: 0.15em 0.4em;
+    display: inline-block;
+    border: 1px solid black;
+    border-width: 1px 1px 1px 0;
+    font-weight: normal;
+    text-decoration: none;
+  }
+  .page-loaded-status:first-child {
+    border-left-width: 1px;
+  }
+  .loaded {
+    background-color: gray;
+    color: white;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.lock-selected-graphs {
+  margin: 0 0.25em;
+}

@@ -1,0 +1,13 @@
+
+    $primaryBackground: pink;
+    $primaryBackgroundHilight: palevioletred;
+    $primaryBackgroundHilightDark: #c45c7f;
+    $primaryBackgroundHilightDark2: #ba5275;
+    $primaryBackgroundHilightDark3: #b0486b;
+    $primaryBackgroundHilightLight: #ec84a7;
+    $primaryBackgroundHilightLight2: #f68eb1;
+    $primaryBackgroundHilightLight3: #ff98bb;
+    $primaryBackgroundHilightLight4: lighten($primaryBackgroundHilightLight3, 10%);
+    $transulcentBackground: rgba(lighten(pink, 5%), 0.4);
+    $lightPink: lighten(pink, 5%);
+    $placeholderTextColor: #bbb;
