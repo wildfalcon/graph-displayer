@@ -124,9 +124,7 @@ You can  use ``<graph-displayer>`` as if it were a html tag:
 
 GraphChooser and GraphDisplayer are both React Component wrapped inside a WebComponent. The WebComponents are contructed using the [Lit-Element](https://lit-element.polymer-project.org/) library.
 
-The WebComponent is defined in `src/components/graph-diplayer/graph-displayer.js` and the React component is in `src/components/graph-displayer/react/GraphDisplayer.js`
-
-Conventions:
+##Conventions:
 
 `Web Components` are hypehnated. eg \<graph-displayer> or \<graph-chooser>. They are defined in `index.html` with the ``customElements.define()`` javascript method.
 
