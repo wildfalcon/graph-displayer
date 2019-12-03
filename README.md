@@ -116,9 +116,9 @@ You can  use ``<graph-displayer>`` as if it were a html tag:
 
 `pdfScale`: Zoom scale of the PDF
 
-`width`: display width of the component (currently ignored)
+`width`: display width of the component 
 
-`height`: display height of the component (currently ignored)
+`height`: display height of the component 
 
 # Development
 

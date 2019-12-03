@@ -439,7 +439,6 @@ export default class GraphChooser extends React.Component {
             pdf,
             pdfUrl,
             selectOutcomes,
-            pageInfo,
             graphInfo,
             settings,
         } = this.state;
@@ -457,20 +456,7 @@ export default class GraphChooser extends React.Component {
         return (
             <div className="graph-chooser-main-ui" ref={this._ourRef}>
                 <div className="header-bar">
-                    <span className="load-progress">
-                        {pageInfo.map(({ loaded }, i) => (
-                            <a
-                                key={i}
-                                className={classNames({
-                                    "page-loaded-status": true,
-                                    loaded: loaded
-                                })}
-                                href={`#page-${i}`}
-                            >
-                                {i + 1}
-                            </a>
-                        ))}
-                    </span>
+                    
                     {pdf && <ZoomControls
                         showSquared={false}
                         zoomInfo={pdfScale}

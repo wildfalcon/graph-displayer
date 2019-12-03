@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import pdfjsLib from "@bundled-es-modules/pdfjs-dist/build/pdf";
-import {getImageDataAsDataUrl } from '../../../Utils';
+import { isEmptyObject, px, getImageDataAsDataUrl } from '../../../Utils';
+
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.js`;
 
@@ -14,9 +15,13 @@ const GraphDisplayer = props => {
   const {
     coords,
     pdfUrl,
+    width,
+    height,
     pageIndex,
     pdfScale
   } = config;
+
+  const noConfig = isEmptyObject(config);
   
   const [pdf, setPdf] = useState(null);
   const [page, setPage] = useState(null);
@@ -79,10 +84,16 @@ const GraphDisplayer = props => {
   useEffect(() => {
     refImage.current.src = dataUrl;
   }, [dataUrl]);
+
+  const imageStyle = {
+    width: px(width),
+    height: px(height),
+    display: noConfig ? 'none' : 'block'
+}
   
   return (
     <div className='graph-displayer' onClick={graphClicked}>
-      <img ref={refImage} alt='' />
+      <img ref={refImage} style={imageStyle} alt='' />
     </div>
   )
 }
