@@ -78,6 +78,11 @@ export function svgMirrorTitle(svg) {
   }
 }
 
+export function isEmptyObject(ob) {
+  return Object.entries(ob).length === 0 && ob.constructor === Object;
+}
+
+
 
 export function px(value) {
   return `${value}${value !== 0 ? 'px' : ''}`;
