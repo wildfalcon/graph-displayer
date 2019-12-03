@@ -439,7 +439,6 @@ export default class GraphChooser extends React.Component {
             pdf,
             pdfUrl,
             selectOutcomes,
-            pageInfo,
             graphInfo,
             settings,
         } = this.state;
